@@ -14,6 +14,7 @@ export async function createReceipt(file: File): Promise<Receipt> {
   return response.data.receipt;
 }
 
-export function getReceiptDownloadUrl(id: string): string {
-  return `${api.defaults.baseURL}/receipts/download/${id}`;
+export async function fetchReceiptUrl(id: string): Promise<string> {
+  const response = await api.get<{ url: string }>(`/receipts/download/${id}`);
+  return `${api.defaults.baseURL}${response.data.url}`;
 }

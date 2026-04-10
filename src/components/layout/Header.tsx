@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { ArrowUUpLeft } from "@phosphor-icons/react";
+import { ArrowClockwise } from "@phosphor-icons/react";
 import { Button } from "@/components/ui/button";
 
 export function Header() {
@@ -8,7 +8,7 @@ export function Header() {
   return (
     <header className="absolute top-10 left-1/2 -translate-x-1/2 w-full max-w-[1185px] flex items-center justify-between px-6 z-10">
       <div className="flex items-center gap-2 text-primary">
-        <ArrowUUpLeft size={28} weight="bold" />
+        <ArrowClockwise size={28} weight="bold" />
         <span className="font-bold text-[22px] lowercase tracking-tight">refund</span>
       </div>
 
@@ -22,7 +22,7 @@ export function Header() {
           Solicitações de reembolso
         </Link>
         <Link to="/refund/new" tabIndex={-1}>
-          <Button className="h-12 px-6 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 font-bold">
+          <Button className="h-12 px-6 rounded-lg bg-primary cursor-pointer text-primary-foreground hover:bg-primary/90 font-bold">
             Nova solicitação
           </Button>
         </Link>

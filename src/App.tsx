@@ -2,6 +2,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Layout } from "./components/layout/Layout";
 import { Home } from "./pages/Home";
 import { NewRefund } from "./pages/NewRefund";
+import { Success } from "./pages/Success";
+import { RefundDetail } from "./pages/RefundDetail";
 
 export default function App() {
   return (
@@ -9,9 +11,9 @@ export default function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
-          <Route path="/refund/success" element={<div>Success</div>} />
+          <Route path="/refund/success" element={<Success />} />
           <Route path="/refund/new" element={<NewRefund />} />
-          <Route path="/refund/:id" element={<div>Detalhe</div>} />
+          <Route path="/refund/:id" element={<RefundDetail />} />
         </Route>
       </Routes>
     </BrowserRouter>
